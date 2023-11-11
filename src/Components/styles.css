@@ -1,0 +1,181 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    overflow: hidden;
+  }
+  
+  .home-container {
+    height: 100vh;
+    background: url('../images/portfolio.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .intro-section {
+    text-align: center;
+    color: white;
+  }
+  
+  .animated-text {
+    overflow: hidden;
+  }
+  
+  .animated-text span {
+    display: inline-block;
+    opacity: 0;
+    transform: translateX(-20px);
+    animation: fadeInRight 1s forwards;
+  }
+  
+  .animated-text span:nth-child(1) { animation-delay: 0.5s; }
+  .animated-text span:nth-child(2) { animation-delay: 1s; }
+  
+  .animated-text-sub {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 2s ease-in-out forwards;
+  }
+  
+  @keyframes fadeInRight {
+    from {
+      opacity: 0;
+      transform: translateX(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  /* home.js ki css ha yah. */
+
+
+.about-container {
+  padding: 40px;
+}
+
+.about-section {
+  text-align: center;
+}
+
+.about-section h2 {
+  font-size: 2em;
+}
+
+.about-section p {
+  font-size: 1.2em;
+  margin-top: 20px;
+}
+
+.skills-section {
+  margin-top: 40px;
+}
+
+.skills-section h3 {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
+
+.skills-section ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.skills-section li {
+  background-color: #3498db;
+  color: white;
+  padding: 10px 20px;
+  margin: 10px;
+  border-radius: 5px;
+  font-size: 1.2em;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.skills-section li:hover {
+  background-color: #2980b9;
+  cursor: pointer;
+}
+
+/* Animate.css classes for fadeIn effect */
+.animate__animated {
+  animation-duration: 1s;
+}
+
+.animate__fadeIn {
+  animation-name: fadeIn;
+}
+
+/* Custom animation delay for skills */
+.animate__delay-1s {
+  animation-delay: 1s;
+}
+
+.animate__delay-2s {
+  animation-delay: 2s;
+}
+/* ya about.js ki c.ss ha */
+  
+.projects-container {
+  padding: 40px;
+}
+
+.projects-heading {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 30px;
+}
+
+.projects-list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.project-card {
+  background-color: #ecf0f1;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 8px;
+  width: 300px;
+  text-align: center;
+}
+
+.project-card h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.project-card p {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.project-card a {
+  display: inline-block;
+  background-color: #3498db;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.project-card a:hover {
+  background-color: #2980b9;
+}
+/* ya project.js ki css ha. */
