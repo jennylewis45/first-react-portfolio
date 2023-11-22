@@ -1,137 +1,79 @@
 body {
-    margin: 0;
-    font-family: 'Arial', sans-serif;
-    overflow: hidden;
-  }
-  
-  .home-container {
-    height: 100vh;
-    background: url('../images/portfolio.jpg') no-repeat center center fixed;
-    background-size: cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .intro-section {
-    text-align: center;
-    color: white;
-  }
-  
-  .animated-text {
-    overflow: hidden;
-  }
-  
-  .animated-text span {
-    display: inline-block;
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  /* overflow: hidden; */
+}
+
+.home-container {
+ height: 100vh;
+ background: url('../images/p1.webp') no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.intro-section {
+  text-align: center;
+  color: black;
+}
+
+.animated-text {
+  overflow: hidden;
+}
+
+.animated-text span {
+  display: inline-block;
+  opacity: 0;
+  transform: translateX(-20px);
+  animation: fadeInRight 1s forwards;
+}
+
+.animated-text span:nth-child(1) { animation-delay: 0.5s; }
+.animated-text span:nth-child(2) { animation-delay: 1s; }
+
+.animated-text-sub {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 2s ease-in-out forwards;
+}
+
+@keyframes fadeInRight {
+  from {
     opacity: 0;
     transform: translateX(-20px);
-    animation: fadeInRight 1s forwards;
   }
-  
-  .animated-text span:nth-child(1) { animation-delay: 0.5s; }
-  .animated-text span:nth-child(2) { animation-delay: 1s; }
-  
-  .animated-text-sub {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
     opacity: 0;
     transform: translateY(20px);
-    animation: fadeInUp 2s ease-in-out forwards;
   }
-  
-  @keyframes fadeInRight {
-    from {
-      opacity: 0;
-      transform: translateX(-20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateX(0);
-    }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  @keyframes fadeInUp {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  /* home.js ki css ha yah. */
-
-
-.about-container {
-  padding: 40px;
 }
+/* home.js ki css ha yah. */
 
-.about-section {
-  text-align: center;
-}
 
-.about-section h2 {
-  font-size: 2em;
-}
 
-.about-section p {
-  font-size: 1.2em;
-  margin-top: 20px;
-}
 
-.skills-section {
-  margin-top: 40px;
-}
 
-.skills-section h3 {
-  font-size: 1.5em;
-  margin-bottom: 20px;
-}
 
-.skills-section ul {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
 
-.skills-section li {
-  background-color: #3498db;
-  color: white;
-  padding: 10px 20px;
-  margin: 10px;
-  border-radius: 5px;
-  font-size: 1.2em;
-  transition: background-color 0.3s ease-in-out;
-}
 
-.skills-section li:hover {
-  background-color: #2980b9;
-  cursor: pointer;
-}
-
-/* Animate.css classes for fadeIn effect */
-.animate__animated {
-  animation-duration: 1s;
-}
-
-.animate__fadeIn {
-  animation-name: fadeIn;
-}
-
-/* Custom animation delay for skills */
-.animate__delay-1s {
-  animation-delay: 1s;
-}
-
-.animate__delay-2s {
-  animation-delay: 2s;
-}
-/* ya about.js ki c.ss ha */
   
 .projects-container {
   padding: 40px;
+  background: url('../images/mess.webp') no-repeat center center fixed;
+
 }
 
 .projects-heading {
@@ -179,3 +121,258 @@ body {
   background-color: #2980b9;
 }
 /* ya project.js ki css ha. */
+
+.contact-container {
+  padding: 40px;
+  background: url('../images/cont.jpg') no-repeat center center fixed;
+
+}
+
+.contact-section {
+  text-align: center;
+}
+
+.contact-section h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.contact-section p {
+  font-size: 1.2em;
+  margin-bottom: 40px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+label {
+  font-size: 1.2em;
+  margin-bottom: 5px;
+}
+
+input, textarea {
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+.animated-button {
+  background-color: #3498db;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.animated-button:hover {
+  background-color: #2980b9;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Additional animation for form elements */
+input, textarea, .animated-button {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease-in-out forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ya contact.js ki css ha */
+
+
+
+.about-container {
+  padding: 40px;
+  text-align: center;
+  background: url('../images/mess.webp') no-repeat center center fixed;
+
+  height: 500px;
+}
+@media only screen and (max-width: 768px){
+  .about-container{
+    height: 1500px;
+  }
+ 
+}
+
+.about-section {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.intro h2, .skills-section h3 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.intro p {
+  font-size: 1.2em;
+  line-height: 1.6;
+}
+
+.skills-section h3 {
+  margin-bottom: 10px;
+}
+
+.skills-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.skill-item {
+  flex: 0 0 100px;
+  margin: 10px;
+  padding: 15px;
+  background-color: #3498db;
+  color: white;
+  border-radius: 5px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Animation classes */
+.animate__animated {
+  opacity: 0;
+}
+
+.animate__fadeIn {
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+.animate__delay-1s {
+  animation-delay: 1s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* ya about.js ki css ha */
+
+
+/* ya home main 2 buttons ki css ha */
+
+
+
+.cta-button {
+  display: inline-block;
+  margin-top: 20px;
+  margin-right: 10px; /* Margin between buttons */
+  padding: 10px 20px;
+  font-size: 1.2em;
+  text-decoration: none;
+  color: white;
+  background-color: #3498db;
+  border-radius: 5px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.cta-button:hover {
+  background-color: #2980b9;
+}
+/* ya home main 2 buttons ki css ha */
+
+
+
+
+
+
+/* styles.css */
+
+
+
+
+ .project-card img {
+  width: 100%;
+  height: auto; 
+} 
+
+
+
+ .project-card {
+  position: relative;
+  overflow: hidden; 
+}
+
+.project-card img {
+  width: 100%;
+  height: auto;
+}
+
+.project-card .project-details {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  opacity: 0; 
+  transition: opacity 0.3s ease-in-out;
+}
+
+.project-card:hover .project-details {
+  opacity: 1; 
+}
+
+.project-card .project-details a {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.project-card .project-details a:hover {
+  background-color: #0056b3;
+}  */
+
+.social-icons {
+  display: flex;
+  align-items: center;
+} 
+
+.social-icons a {
+  margin-right: 15px;
+  font-size: 20px;
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}  
+
+.social-icons a:hover {
+  color: #007bff;
+}
+
+  
+
+
+
+
+
+
